@@ -43,4 +43,10 @@ Outputs: code_execution_results.json
 | Output tokens | 578 |
 | Est. cost | $0.0024 |
 
+## Risks (resolved)
+- Generated code may have syntax errors — not observed; Claude generated valid Python on first attempt
+- Security: exec() must be restricted — mitigated by safe_import whitelist (only rdkit/pandas/numpy)
+- __import__ not available in restricted builtins — fixed by adding safe_import function (v1.2 deviation)
+- Generated code may import dangerous modules (os, sys, subprocess) — blocked by safe_import
+
 Key finding: Claude generated correct RDKit code on first attempt, including Murcko scaffold decomposition and groupby aggregation. The safe_import sandboxing pattern works well for restricting module access.
