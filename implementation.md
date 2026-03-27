@@ -1,6 +1,6 @@
 # Phase 69 — Claude with Code Execution Tool (Local Pattern)
 
-**Version:** 1.1 | **Tier:** Standard | **Date:** 2026-03-27
+**Version:** 1.2 | **Tier:** Standard | **Date:** 2026-03-27
 
 ## Goal
 Demonstrate a code execution pattern where Claude generates Python/RDKit code in response to a chemistry question, and the code is executed locally to produce results. Simulates the server-side code execution tool pattern.
